@@ -1,6 +1,63 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/QGf4F8_h)
 # Projet "Dice" - Gestion de lancés de dés avec Spring Boot
 
+## Lancement 
+
+# Dice Roll API
+
+## Description
+
+Ce projet est une API Spring Boot pour lancer des dés et récupérer les logs des lancers de dés.
+
+## Prérequis
+
+- Java 17
+- Gradle
+- IDE (IntelliJ IDEA recommandé)
+
+## Installation
+
+1. Clonez le dépôt :
+
+    ```bash
+    git clone <URL_DU_DEPOT>
+    cd <NOM_DU_DEPOT>
+    ```
+
+2. Ouvrez le projet dans IntelliJ IDEA.
+
+3. Assurez-vous que le projet utilise Java 17. Vous pouvez configurer cela dans `build.gradle.kts` :
+
+    ```kotlin
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+    ```
+
+## Dépendances
+
+Les dépendances principales utilisées dans ce projet sont :
+
+- Spring Boot Starter Data JPA
+- Spring Boot Starter Web
+- SpringDoc OpenAPI Starter WebMVC UI
+- H2 Database
+
+Ces dépendances sont définies dans `build.gradle.kts` :
+
+```kotlin
+dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
+    runtimeOnly("com.h2database:h2")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+```
+
 ## Description
 Le projet "Dice" est une application construite avec Spring Boot permettant de simuler des lancés de dés et de gérer un historique des résultats en base de données. Ce projet met en œuvre les concepts fondamentaux de Spring Boot, notamment l'injection de dépendances, les services RESTful, les entités JPA et les repositories.
 
